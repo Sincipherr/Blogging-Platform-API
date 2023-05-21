@@ -30,7 +30,8 @@ public class UserService {
     public SignUpOutput signup(User signupdto) {
         User user=ur.findFirstByUserEmail(signupdto.getUserEmail());
         if(user!=null){
-            throw new IllegalStateException("User already exist..Sign in instead..!");
+//            throw new IllegalStateException("User already exist..Sign in instead..!");
+            return new SignUpOutput("User already exist","Sign in instead..!");
         }
         String encryptedpassword=null;
         try {
@@ -55,7 +56,8 @@ public class UserService {
     public SignInOutput signin(SignInInput signindto) {
         User user=ur.findFirstByUserEmail(signindto.getUserEmail());
         if(user==null){
-            throw new IllegalStateException("Invalid user..Sign up instead..");
+//            throw new IllegalStateException("Invalid user..Sign up instead..");
+            return new SignInOutput("Invalid user","Invalid user");
         }
         String encryptedpassword=null;
         try {
