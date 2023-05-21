@@ -113,6 +113,11 @@ We have used Persistent database to implement CRUD Operations.
 ---
 <br>
 
+## New in this project
+
+- I have used MySql - Database in this project which will we can link to sql workbench which is persistance database,data will stored remotely
+- I have used Authentication, which will produce token, which we can use to verify user all the time.
+
 ## Project Summary
 
 The project is a basic web application built using Java and the Spring framework. It allows users to sign up, sign in, and used to upload there blog in the website, where large number of viewer can view the blog. Users can also create and view posts. The application uses authentication tokens to secure user data and ensure that only authenticated users can access certain features. The API endpoints include user signup, signin, and update details, post creation and retrieval, and authentication token creation. 
