@@ -14,8 +14,8 @@ import java.util.List;
 public interface IPostRepo extends CrudRepository<Post,Long> {
     List<Post> findByUser(User user);
 
-
     @Modifying
     @Query(value = "update post set post_data= :data where post_id= :postid",nativeQuery = true)
     void updatepost(Long postid, String data);
+
 }

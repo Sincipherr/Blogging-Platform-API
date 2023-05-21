@@ -71,4 +71,5 @@ public class PostController {
     public void deletepost(@PathVariable Long postid){
         ps.deletepost(postid);
     }
+
 }

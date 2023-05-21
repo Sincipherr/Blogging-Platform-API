@@ -37,4 +37,5 @@ public class PostService {
     public void deletepost(Long postid) {
         pr.deleteById(postid);
     }
+
 }

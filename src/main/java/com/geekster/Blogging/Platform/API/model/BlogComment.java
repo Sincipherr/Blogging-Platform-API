@@ -20,6 +20,7 @@ public class BlogComment {
     private Post post;
 
     @ManyToOne
-    @JoinColumn(name = "FK_UserID")
+    @JoinColumn(nullable = false,name = "FK_User_ID")
     private User user;
+
 }
