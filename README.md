@@ -63,8 +63,8 @@ spring.jpa.properties.hibernate.format_sql=true
 ---
 <br>
 
+---
 
-```
 ## Data Flow
 
 1. The user at client side sends a request to the application through the API endpoints.
