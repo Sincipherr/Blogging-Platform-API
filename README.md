@@ -126,7 +126,8 @@ We have used Persistent database to implement CRUD Operations.
 
 - I have used MySql - Database in this project which will we can link to sql workbench which is persistance database,data will stored remotely
 - I have used Authentication, which will produce token, which we can use to verify user all the time.
-- 
+
+
 
 ## Project Summary
 
