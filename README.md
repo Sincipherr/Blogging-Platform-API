@@ -113,10 +113,20 @@ We have used Persistent database to implement CRUD Operations.
 ---
 <br>
 
+## Features
+
+- User can upload Blog
+- User can watch other user blog
+- User can comment on other blog
+- User can follow other user
+- Easy to manage details, update, delete, get all blog
+
+
 ## New in this project
 
 - I have used MySql - Database in this project which will we can link to sql workbench which is persistance database,data will stored remotely
 - I have used Authentication, which will produce token, which we can use to verify user all the time.
+- 
 
 ## Project Summary
 
