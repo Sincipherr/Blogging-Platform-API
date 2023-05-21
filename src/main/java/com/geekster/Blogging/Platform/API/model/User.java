@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table
 public class User {
@@ -16,16 +17,14 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
     @NotEmpty
+    @Column(nullable = false)
     private String userName;
     @Email
     @NotEmpty
+    @Column(nullable = false,unique = true)
     private String userEmail;
     @NotEmpty
+    @Column(nullable = false)
     private String userPassword;
 
-    public User(String userName, String userEmail, String userPassword) {
-        this.userName = userName;
-        this.userEmail = userEmail;
-        this.userPassword = userPassword;
-    }
 }
