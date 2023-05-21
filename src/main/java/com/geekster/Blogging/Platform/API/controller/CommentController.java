@@ -2,6 +2,7 @@ package com.geekster.Blogging.Platform.API.controller;
 
 import com.geekster.Blogging.Platform.API.model.BlogComment;
 import com.geekster.Blogging.Platform.API.service.CommentService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,7 +14,7 @@ public class CommentController {
     CommentService cs;
 
     @PostMapping(value = "/comment")
-    public String addcomment(@RequestBody BlogComment comment){
+    public String addcomment(@Valid @RequestBody BlogComment comment){
         return cs.addcomment(comment);
     }
 }

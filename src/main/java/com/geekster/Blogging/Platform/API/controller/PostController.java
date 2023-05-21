@@ -40,7 +40,7 @@ public class PostController {
     }
 
     @GetMapping(value = "/get")
-    public ResponseEntity<List<Post>> getallpost(@RequestParam String email,@RequestParam String token){
+    public ResponseEntity<List<Post>> getallpost(@Valid @RequestParam String email,@RequestParam String token){
         HttpStatus status;
         List<Post> postList=null;
         if(as.authenticate(email,token)){
@@ -53,7 +53,7 @@ public class PostController {
     }
 
     @PutMapping(value = "/update/{postid}/{data}")
-    public ResponseEntity<String> updatepost(@PathVariable Long postid,@RequestParam String email,@RequestParam String token,@PathVariable String data){
+    public ResponseEntity<String> updatepost(@Valid @PathVariable Long postid,@RequestParam String email,@RequestParam String token,@PathVariable String data){
         HttpStatus status;
         String message="";
         if(as.owner(token,postid)){
